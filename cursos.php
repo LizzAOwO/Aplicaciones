@@ -9,9 +9,9 @@
     include 'conexion.php';
     $conn = conectar();
     $usu_id = $_SESSION['id'];
-    $sql_leer = "SELECT cursos.nombre, cursos.descripcion FROM alumno_cursos, cursos  WHERE usuario_id = '$usu_id' and alumno_cursos.cursos_id = cursos.cursos_id";
+    $sql_leer = "SELECT cursos.nombre, cursos.cursos_id, cursos.descripcion FROM alumno_cursos, cursos  WHERE usuario_id = '$usu_id' and alumno_cursos.cursos_id = cursos.cursos_id";
     $query = mysqli_query($conn, $sql_leer);
-    //echo $query;
+     //echo $query;
 ?>
 
 <!DOCTYPE html>
@@ -39,11 +39,12 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#home" class="nav__link active-link">Mis cursos</a>
+              <a href="#home" class="nav__link ">Mis cursos</a>
             </li>
             <li class="nav__item">
               <a href="./cursos_dis.php" class="nav__link">Cursos disponibles</a>
             </li>
+            <a href="./editarusu.php" class="button button--ghost">Actualizar</a>
             <a href="./cerrarsesion.php" class="button button--ghost">Cerrar sesion</a>
           </ul>
           <div class="nav__close" id="nav-close">
@@ -64,15 +65,20 @@
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <?php
               while($resultado = mysqli_fetch_array($query)){?>
+               <form action="eliminar_curso.php" method="POST">
                 <div class="col">
                 <div class="card text-secondary">
                   <img src="./img2/tarjeta.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title"><?php echo $resultado['nombre'] ?></h5>
                     <p class="card-text"><?php echo $resultado['descripcion'] ?></p>
+                    <input type="hidden" name="cursos_id" value="<?php echo $resultado['cursos_id']; ?>">
+                    <input type="hidden" name="usuario_id" value="<?php echo $_SESSION['id']; ?>">
+                    <button type="submit" class="btn btn-outline-dark">Eliminar</button>
                   </div>
                 </div>
-              </div>
+                </div>
+               </form>
             <?php
             }
             ?></div>   

@@ -37,11 +37,12 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="./cursos.php" class="nav__link active-link">Mis cursos</a>
+              <a href="./cursos.php" class="nav__link ">Mis cursos</a>
             </li>
             <li class="nav__item">
               <a href="./cursos_dis.php" class="nav__link">Cursos disponibles</a>
             </li>
+            <a href="./editarusu.php" class="button button--ghost">Actualizar</a>
             <a href="./cerrarsesion.php" class="button button--ghost">Cerrar sesion</a>
           </ul>
           <div class="nav__close" id="nav-close">

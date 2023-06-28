@@ -28,15 +28,14 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#home" class="nav__link active-link">Home</a>
-            </li>
-            <li class="nav__item">
-              <a href="#about" class="nav__link">Nosotros</a>
+              <a href="#home" class="nav__link ">Home</a>
             </li>
             <li class="nav__item">
               <a href="#cursos" class="nav__link">Cursos</a>
             </li>
             <a href="./entrar.php" class="button button--ghost">Entrar</a>
+            <a href="./registro.php" class="button button--ghost">Registrarme</a>
+            <a href="./index2.php" class="button button--ghost">Touch Me!!</a>
           </ul>
           <div class="nav__close" id="nav-close">
             <i class="bx bx-x"></i>

@@ -12,7 +12,7 @@
         $sql_agregar = "INSERT INTO alumno_cursos (cursos_id , usuario_id) VALUES('$curso_id', '$usuario_id')";
         echo $sql_agregar;
         $query = mysqli_query($conn, $sql_agregar);
-        header('location: cursos_dis.php');
+        header('location: cursos2.php');
     }else{
         header('location: cursos_dis.php');
     }

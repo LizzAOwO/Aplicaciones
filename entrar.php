@@ -22,7 +22,7 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="./index.php" class="nav__link active-link">Home</a>
+              <a href="./index.php" class="nav__link ">Home</a>
             </li>
             <a href="./registro.php" class="button button--ghost">Registrarme</a>
           </ul>
@@ -47,13 +47,12 @@
             ¿Tienes una cuenta? Si la tienes ingresa para comenzar tu aprendizaje!!
           </p>
           <div>
-                <form action="login.php" class="newsletter__form" method="POST">
+                <form action="login.php" class="form-inline" method="POST">
                     <p>
-                        <input type="text" class="newsletter__input" name="login_usuario" placeholder="Correo">
+                        <input type="text" class="newsletter__form" name="login_usuario" placeholder="Correo">
                     </p>
-                  </br>
                     <p>
-                        <input type="text" class="newsletter__input" name="login_contrasena" placeholder="Contraseña">
+                        <input type="password" class="newsletter__form" name="login_contrasena" placeholder="Contraseña">
                     </p>
                     <p>
                         <button type="submit" class="button">Entrar</button>

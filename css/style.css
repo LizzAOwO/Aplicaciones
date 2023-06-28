@@ -14,7 +14,7 @@
 
   /*gradiantes*/
   --body-color: linear-gradient(90deg, hsl(278, 84%, 75%) 0%, hsl(327, 92%, 54%) 100%);
-  --container-color: linear-gradient(136deg, hsl(120, 1%, 15%) 0%, hsl(0, 0%, 3%) 100%);
+  --container-color: linear-gradient(136deg, hsl(279, 49%, 72%) 0%, hsl(283, 62%, 71%) 100%);
 
   /*letras*/
   --body-font: 'Poppins', sans-serif;
@@ -408,11 +408,11 @@ button{
 }
 
 .newsletter__form{
-  background: var(--container-color);
+  /* background: none; */
   padding: 1rem;
   display: flex;
-  justify-content: space-between;
-  border-radius: .75rem;
+  justify-content:space-between;
+  /* border-radius: .75rem; */
 }
 
 .newsletter__input{
@@ -557,7 +557,7 @@ button{
 }
 
 ::-webkit-scrollbar-thumb{
-  background: #272525;
+  background: #8049b6;
   border-radius: .5rem;
 }
 
